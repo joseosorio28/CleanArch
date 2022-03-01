@@ -1,15 +1,15 @@
-package model;
+package com.pragma.dto;
 
-import lombok.*;
-
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client {
-
+public class ClientDto {
     private Long clientId;
     private String firstName;
     private String lastName;
@@ -17,14 +17,13 @@ public class Client {
     private Long idNumber;
     private Integer age;
     private String cityOfBirth;
-    private List<Image> images;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Client client = (Client) o;
+        ClientDto client = (ClientDto) o;
 
         if (!idType.equals(client.idType)) return false;
         return idNumber.equals(client.idNumber);

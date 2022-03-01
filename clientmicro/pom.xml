@@ -12,9 +12,10 @@
     <artifactId>clientmicro</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>infraestructure</module>
-        <module>domain</module>
+        <module>bootloader</module>
+        <module>infrastructure</module>
         <module>application</module>
+        <module>domain</module>
     </modules>
 
     <properties>
