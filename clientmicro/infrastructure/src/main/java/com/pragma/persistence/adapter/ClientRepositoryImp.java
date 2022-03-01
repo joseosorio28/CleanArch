@@ -36,7 +36,7 @@ public class ClientRepositoryImp implements IClientOutputPort {
     @Override
     public Optional<Client> findFirstByIdTypeAndIdNumber(String idType, Long idNumber) {
         Optional<ClientEntity> optionalClientEntity = clientRepository.findFirstByIdTypeAndIdNumber(idType, idNumber);
-        return Optional.of(clientEntityMapper.toClient(optionalClientEntity.orElse(null)));
+        return optionalClientEntity.map(clientEntityMapper::toClient);
     }
 
     @Override

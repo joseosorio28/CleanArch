@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = {
         "com.pragma",
+        "com.pragma.exceptions",
         "com.pragma.service",
         "com.pragma.adapters",
         "com.pragma.endpoints",
